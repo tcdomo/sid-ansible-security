@@ -1,0 +1,34 @@
+Tower: https://t2.mysidlabs.com
+username: user101-120
+password: P@ssword1!
+username: admin
+password: 9PLU40vy
+
+SEC-PAN-Demo Firewall: IP changes, get from AWS
+username: admin
+password: Myt3stpw!
+
+Text to send via chat:
+Tower: https://t2.mysidlabs.com
+password: P@ssword1!
+username:
+  user101 - 
+  user102 - 
+  user103 - 
+  user104 - 
+  user105 - 
+  user106 - 
+  user107 - 
+  user108 - 
+  user109 - 
+  user110 - 
+  user111 - 
+  user112 - 
+  user113 - 
+  user114 - 
+  user115 - 
+  user116 - 
+  user117 - 
+  user118 - 
+  user119 - 
+  user120 - 

@@ -1,0 +1,5 @@
+---
+collections:
+  - name: paloaltonetworks.panos
+    version: '2.6.0'
+  - name: community.general

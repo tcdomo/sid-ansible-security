@@ -1,0 +1,73 @@
+{
+    "erd_data": {
+      "version": "v1.2.0",
+      "metadata": {
+        "links": {
+          "self": "https://api.amp.cisco.com/v1/events?event_type%5B%5D=1090519054&limit=10",
+          "next": "https://api.amp.cisco.com/v1/events?event_type%5B%5D=1090519054&limit=10&offset=10"
+        },
+        "results": {
+          "total": 723,
+          "current_item_count": 10,
+          "index": 0,
+          "items_per_page": 10
+        }
+      },
+      "data": [
+        {
+          "id": 6180352115244794000,
+          "timestamp": 1635182438,
+          "timestamp_nanoseconds": 279000000,
+          "date": "2021-10-25T17:20:38+00:00",
+          "event_type": "Threat Detected",
+          "event_type_id": 1090519054,
+          "detection": "W32.GenericKD:ZVETJ.18gs.1201",
+          "detection_id": "6180352115244793858",
+          "connector_guid": "5e99d791-5abd-4d9d-8d85-fb23031e4812",
+          "group_guids": [
+            "e766a0e9-96da-41b9-b1e8-87dd010d6b68"
+          ],
+          "severity": "Medium",
+          "computer": {
+            "connector_guid": "5e99d791-5abd-4d9d-8d85-fb23031e4812",
+            "hostname": "Demo_Upatre",
+            "external_ip": "1.50.15.152",
+            "user": "A@TEMPLATE-W7X86",
+            "active": true,
+            "network_addresses": [
+              {
+                "ip": "206.169.82.33",
+                "mac": "10:b6:1a:49:33:a3"
+              }
+            ],
+            "links": {
+              "computer": "https://api.amp.cisco.com/v1/computers/5e99d791-5abd-4d9d-8d85-fb23031e4812",
+              "trajectory": "https://api.amp.cisco.com/v1/computers/5e99d791-5abd-4d9d-8d85-fb23031e4812/trajectory",
+              "group": "https://api.amp.cisco.com/v1/groups/53dd2fcd-d9d0-4ca9-96e6-89b1038be448"
+            }
+          },
+          "file": {
+            "disposition": "Malicious",
+            "file_name": "wsymqyv90.exe",
+            "file_path": "\\\\?\\C:\\Users\\Administrator\\AppData\\Local\\Temp\\OUTLOOK_TEMP\\wsymqyv90.exe",
+            "identity": {
+              "sha256": "b630e72639cc7340620adb0cfc26332ec52fe8867b769695f2d25718d68b1b40",
+              "sha1": "70aef829bec17195e6c8ec0e6cba0ed39f97ba48",
+              "md5": "e2f5dcd966e26d54329e8d79c7201652"
+            },
+            "parent": {
+              "process_id": 4040,
+              "disposition": "Clean",
+              "file_name": "iexplore.exe",
+              "identity": {
+                "sha256": "b4e5c2775de098946b4e11aba138b89d42b88c1dbd4d5ec879ef6919bf018132",
+                "sha1": "8de30174cebc8732f1ba961e7d93fe5549495a80",
+                "md5": "b3581f426dc500a51091cdd5bacf0454"
+              }
+            }
+          }
+        }
+      ]
+    }
+}
+

@@ -1,0 +1,43 @@
+---
+- name: Create a SOC ERD-Event ticket in jira
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  tasks:
+    - name: Create SOC Ticket
+      # Fields:
+      # Event Type ID:  10070
+      # ID:             10071
+      # Active:         10072
+      # External IP:    10073
+      # IPAddress:      10074
+      # Mac Address:    10075
+      # Event Type      10065
+      # Hostname:       10066
+      # Severity:       10067
+      # DetectionID:    10068
+      # Detection:      10069a
+      community.general.jira:
+        uri: '{{ base_uri }}'
+        username: '{{ username }}'
+        password: '{{ api_token }}'
+        project: '{{ project_key }}'
+        operation: create
+        summary: "AMP: {{item.event_type}}: RHAP Automated mitigation"
+        issuetype: ERD-Event
+      args:
+        fields:
+          customfield_10065: '{{ item.event_type}}'
+          customfield_10066: '{{ item.computer.hostname }}'
+          customfield_10067: '{{ item.severity }}'
+          customfield_10068: '{{ item.detection_id }}'
+          customfield_10069: '{{ item.detection }}'
+          customfield_10070: '{{ item.event_type_id }}'
+          customfield_10071: '{{ item.id }}'
+          customfield_10072: '{{ item.computer.active }}'
+          customfield_10073: '{{ item.computer.external_ip }}'
+          customfield_10074: '{{ item.computer.network_addresses[0].ip }}'
+          customfield_10075: '{{ item.computer.network_addresses[0].mac }}'
+      loop: '{{erd_data.data}}'
+      register: issue

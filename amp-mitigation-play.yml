@@ -1,0 +1,12 @@
+---
+- name: Add rule to PaloAlto NGFW
+  connection: local
+  hosts: localhost
+  gather_facts: true
+
+  collections:
+    - paloaltonetworks.panos
+
+  roles:
+    - paloalto
+    - jira
