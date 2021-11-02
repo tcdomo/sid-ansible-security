@@ -1,11 +1,11 @@
 ---
-- name: Add rule to PaloAlto NGFW
+- name: Add rule to PaloAlto NGFW and create SOC ticket
   connection: local
   hosts: localhost
   gather_facts: true
 
-  collections:
-    - paloaltonetworks.panos
+  #  collections:
+  #  - paloaltonetworks.panos
 
   roles:
     - paloalto
