@@ -18,7 +18,7 @@
     password: '{{ api_token }}'
     project: '{{ project_key }}'
     operation: create
-    summary: "AMP: {{item.event_type}}: RHAP Automated mitigation"
+    summary: "siduser111-AMP: {{item.event_type}}: RHAP Automated mitigation"
     issuetype: ERD-Event
   args:
     fields:
