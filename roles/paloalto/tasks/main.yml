@@ -2,7 +2,7 @@
 - name: Add Security Rules
   paloaltonetworks.panos.panos_security_rule:
     provider: '{{ provider }}'
-    rule_name: 'Block amp_{{ item.detection_id }}'
+    rule_name: 'siduser111-Block amp_{{ item.detection_id }}'
     description: '{{ rule_desc }}'
     source_zone: '{{ source_zone }}'
     destination_zone: '{{ destination_zone }}'
